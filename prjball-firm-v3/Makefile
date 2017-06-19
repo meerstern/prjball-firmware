@@ -1,0 +1,23 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: inout.mcp
+# Date: Sat Jun 13 22:55:29 2015
+
+AS = pic30-as.exe
+CC = pic30-gcc.exe
+LD = pic30-ld.exe
+AR = pic30-ar.exe
+HX = pic30-bin2hex.exe
+RM = rm
+
+inout.hex : inout.cof
+	$(HX) "inout.cof"
+
+inout.cof : inout.o
+	$(CC) -mcpu=33FJ64GP802 "inout.o" -o"inout.cof" -Wl,-Tp33FJ64GP802.gld,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,-Map="inout.map",--report-mem
+
+inout.o : func.h variable.h sysint.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/include/ctype.h FSIO.c c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h FSconfig.h FSconfig.h SD-SPI.h FSDefs.h FSconfig.h FSIO.h GenericTypeDefs.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/include/string.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/include/stdlib.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/include/stdarg.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/include/stddef.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/include/stdio.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h Compiler.h SD-SPI.c HardwareProfile.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/generic/h/libpic30.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h spi_cstm.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/peripheral_30F_24H_33F/uart.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/peripheral_30F_24H_33F/adc.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/peripheral_30F_24H_33F/outcompare.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/peripheral_30F_24H_33F/delay.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/peripheral_30F_24H_33F/timer.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33FJ64GP802.h c:/program\ files\ (x86)/microchip/mplabc30/v3.30/support/dsPIC33F/h/p33Fxxxx.h inout.c
+	$(CC) -mcpu=33FJ64GP802 -x c -c "inout.c" -o"inout.o" -D__DEBUG -g -Wall
+
+clean : 
+	$(RM) "inout.o" "inout.cof" "inout.hex"
+
